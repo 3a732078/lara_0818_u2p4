@@ -22,3 +22,15 @@ Route::get('home',[\App\Http\Controllers\home::class,'index']);
 Route::get('hello/{name?}',
 [\App\Http\Controllers\HelloController::class,'index'])
 ->name('hello.index');
+
+Route::get('home',[\App\Http\Controllers\post::class,
+    'home']);
+
+Route::get('about',[\App\Http\Controllers\post::class,
+    'about']);
+
+Route::get('post',[\App\Http\Controllers\post::class,
+    'post']);
+
+Route::get('contact',[\App\Http\Controllers\post::class,
+    'contact']);
