@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect('home') ;
 });
 
 Route::get('home',[\App\Http\Controllers\home::class,'index']);
@@ -24,13 +24,13 @@ Route::get('hello/{name?}',
 ->name('hello.index');
 
 Route::get('home',[\App\Http\Controllers\post::class,
-    'home']);
+    'home'])->name('home');
 
 Route::get('about',[\App\Http\Controllers\post::class,
-    'about']);
+    'about'])->name('about');
 
 Route::get('post',[\App\Http\Controllers\post::class,
-    'post']);
+    'post'])->name('post');
 
 Route::get('contact',[\App\Http\Controllers\post::class,
-    'contact']);
+    'contact'])->name('contact');
